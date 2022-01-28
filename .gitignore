@@ -1,0 +1,18 @@
+# Notebook Checkpoints
+**/.ipynb_checkpoints/
+
+# All Datasets
+**/*.csv
+./Datasets/*
+
+# All Pickle Saved Instances
+**/*.pkl
+
+# Python Specific
+**/.idea
+
+# All Zip files
+**/*.zip
+
+# virtual environment
+*/datascience_venv
