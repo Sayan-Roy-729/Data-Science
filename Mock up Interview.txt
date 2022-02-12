@@ -1,0 +1,121 @@
+#############################################################################################
+                                               Video-1
+#############################################################################################
+
+1. In the first mock up interview video, that guy told that he used hybrid CNN for NLP project. How the CNN model?
+
+2.  What is the role of activation function in Neural Network?
+3.  Softmax function.
+4.  Dropout technique. What will happen if the dropout is set to 0.5?
+5.  Are you aware of Gradient Descent? How SGD is different from GD? Pros and cons of SGD
+6.  MiniBatch Gradient Descent and what are difference from other types.
+7.  How do you decide which one is your best model? (ML)
+8.  Do you see anything in the data before choosing model? (ML)
+9.  In employee churn problem which type of problem will you choose like regression type or
+    tree based or neural network type model. How do you handle this type of problem?
+10. Difference between regression based and tree based model.
+11. Good things and bad things of regression models and tree based models.
+12. What is underfitting and overfitting?
+13. What types of model trends to overfit?
+14. What is the difference between standard scaler and minmax scaler?
+15. In python, what is the difference between normal function and lambda function?
+16. Why do we need lambda function?
+17. There are 2 datasets df1 and df2. When you merge these 2 datasets how do you tend only 
+    the  records in the left data? After joining, new dataset df3 will be created. Then 
+    if we filter only to the left side, not the right side?
+18. Can I have duplicate keys in my dictionaries? If I try to create duplicate keys,
+    then what happens?
+19. How lists is different from sets?
+20. If I give you 10 numbers in list, and I want to see the 62 percentile. How do I do that?
+21. 65th percentile of the marks is 32. What is the meaning of this in plain english?
+22. Conditional probability. Some example of real life.
+23. What is the probability for getting an even number when you roll a dice? Given If the 
+    number is greater than equal to 4, what is the probability of getting an even number?
+24. Suppose I have 10 numbers. In these 10 numbers I add 5 to all these numbers. Then what 
+    will happen with mean, variance, median, standard deviation.
+
+
+#############################################################################################
+                                               Video-2
+#############################################################################################
+
+1.  When do you choose mean and when do you choose median for filling the NaN values or data cleaning?
+2.  How mean is different from median?
+3.  What is MinMax Scaler?
+4.  How standard scaler is different from MinMax scaler?
+5.  What you will do if there is a categorical variable?
+6.  How XGBoost works for regression and classification problem? Which type of ensemple method is this?
+7.  Important parameters of XGBoost models?
+8.  Can you explain learning rate in real life example. How it is important.
+9.  is KNN supervised algorithm or not? Decision tree? How the decision tree is difference
+    from linear regression model?
+10. What is multicollinearity and why it is a problem? What will happen if we have 2 variables which has
+    highly correlation to the linear model, explain in mathematically?
+11. If there is a regression model saying y = β0 + β1x1 + b2x2 + ... How do you explain these
+    β0, β1, β2... to someone? Lets say β1 = 1.2 How do you explain this to business?
+12. What are the assumptions for regression model?
+13. Can you explain the PCA? How it works internally?
+14. How the covariance is different from correlation?
+15. Measures of central tendency and measures of dispersion. What is the impact of variance like
+    (high variance & low variance) to build ML model?
+16. Difference between addition and multiplication rule in probability?
+17. what is Conditional probability?
+18. What is the Normal Distribution? First standard deviasion (68.3% data lies in between -1 to +1 std) 
+    using example.
+19. How is different the numpy array from python list? lets say a = [1, 2, 3, 4]. How do you 
+    change the 2 to your name?
+20. How does insert operation works in python list?
+21. Your jupyter notebook code, how do I use that to other ide like spider or in plain python?
+22. Suppose you have wrote a very good function. I want to use that code. How do you give me that?
+23. What is python path? Why it is useful?
+
+#############################################################################################
+                                               Video-3
+#############################################################################################
+
+1.  How do you think encoding is necessary? How does it help? Is it applicable to all the 
+    algorihms or few of the them?
+2.  What is a regression model?
+3.  How Random Forest algorithm works? In your data, there are 10k rows and 30 features. You 
+    take this data and train a Random Forest model and tomorrow I want to predict. How this
+    entire flow works?
+4.  How Random Forest is different from Decision Tree?
+5.  What is the bias and variance?
+6.  How median is related to the percentile?
+7.  Odd ratio
+8.  Addition rule and multiplication rule in probability.
+9.  Let's say there is a class of 5 students and I took a test. I got an average marks. Later
+    I realized that I forgot to add the marks of one student. So, if I include that marks,
+    what will happen with the average marks?
+10. How the variance is different from standard division? If I have variance, then why do
+    we need standard deviasion.
+11. Standard normal distribution. Defination
+12. PDF (Probability Density Function).
+13. What are the different datatypes in Python.
+14. What is a dictionary? How dictionary looks like? Difference between DataFrame and 
+    dictionary.
+15. How to create a list in Python? Lets say list1 = [name1, name2] and list2 = [name3, 
+    name4, naqme5]. How to create list3 where the list1 and list2 will be together? All
+    file names in one list.
+16. In a patient data, there are two columns named age and gender. I want to create a new 
+    column where I want to create flag value say if female is 30+ then the flag value is 1
+    otherwise 0. How to do that?
+17. What is the differences between numpy and pandas? Which is used to which purpose?
+18. In Pandas, lets say there is patient data. From that data I want to see what is the number
+    of appoinments in one column for person by person. One person take one appoinment, other person take
+    2 appoinments. Gender column is also there. I want to see average number of appoinments
+    for male and what is the average number of appoinments for female?
+19. How do you define the difference of inner join from left outer join? (SQL)
+20. You are working in an organization where customers can book doctors' appoinment. The app
+    is good for few states in India and not good to some other states. Lets say you are a
+    business development person. That app is not good for Gujurat but good for Dehli, 
+    Hariyama. What approach you will take, how will you collect data and what recommendation
+    from your side for the organization that it can capture the market of Gujurat?
+
+#############################################################################################
+                                               Video-4
+#############################################################################################
+
+1. 
+
+
