@@ -2,7 +2,8 @@
                                                Video-1
 #############################################################################################
 
-1. In the first mock up interview video, that guy told that he used hybrid CNN for NLP project. How the CNN model?
+1. In the first mock up interview video, that guy told that he used hybrid CNN for NLP project. 
+   How the CNN model?
 
 2.  What is the role of activation function in Neural Network?
 3.  Softmax function.
@@ -116,6 +117,39 @@
                                                Video-4
 #############################################################################################
 
-1. 
-
+1.  How logistic regression works internally?
+2.  Can I train classification problem using linear regression? And why?
+3.  Is Pearson correlations (normal correlation) valid for your target variable when it 
+    is categorical?
+4.  In linear regression, y = β0 + β1x1 + b2x2 + ... Here, How do you explain these β0, β1, 
+    β2.. to the business or quantitive explaination.
+5.  Different evaluation matrixes in linear regression? Can you tell the advantages RMSE over
+    MSE? Why do we need this two types? And what is about MAPE (Mean Absolute % Error)?
+6.  What is your favourite model in terms of way?
+7.  How R^2 is calculated? Can I have negative R^2? If I give you 3 actual values and 3 predicted
+    values, then can you calculate in pen-and-paper?
+8.  Why does Random Forest give you better result as compared to other model? How do you think
+    Random Forest helps us on Bias-Variance Trade off?
+9.  Difference between inferential statistics and descriptive statistics?
+10. If I give you 4 nubers like example 44, 11, 33 and 22. What is the median of these 4 numbers?
+11. Type-I & Type-II error.
+12. Degrees of Freedom.
+13. Are you aware of any method through which we can say that whether an observation is outlier or
+    not?
+14. For IQR, what is the formula?
+15. In Python I was doing some pickling and unpickling 2-3 days back. I wrote a model and later I
+    will read that. But I am getting an error saying that can't pickle wref object something. Do
+    you have any idea about this error?
+16. What kind of modules you have used in Python?
+17. How do you delete an object in Python like you have an object DataFrame or list. I want to remove
+    it. How do you do that? (Anything other aware of to do this without using del keyword). -> os.remove
+18. Lets say there are 2 dataframes df1 and df2. Then I wrote df2 = df1 or df2 = df1.copy(). How do these
+    two things different? (Deep copy and shallow copy)
+19. What is the efficient way that makes loop run faster?
+20. I was running keras model/tensorflow model. And my data is little large like there are 150 columns 
+    and 1 target. How do I prepare for modelling is I just break it in test and train. But this model
+    takes lots of time to train for 2 reasons. One is more number of records and other is more number
+    of features. What would be your advice, how can I reduce time? (Without using batch size or PCA)
+21. I ask you to calculate what will be the Flipkart's revenue from Bangalore? How do you collect the
+    data?
 
