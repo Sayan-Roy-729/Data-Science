@@ -153,3 +153,61 @@
 21. I ask you to calculate what will be the Flipkart's revenue from Bangalore? How do you collect the
     data?
 
+#############################################################################################
+                                               Video-5
+#############################################################################################
+
+1.  What is Machine Learning?
+2.  What is the problem in python if I read the data (classification data) by using linear regression
+    instead of using logistic regression?
+3.  How 0 and 1 predicted in logistic regression?
+4.  Lets say logistic regression output is a probability value. So how do you interprete your model's
+    coefficiency of logistic regression? In mathematical way. Like y = β0 + β1x1 + b2x2 + ... if β1
+    value is very high with other weights. Question is how much high?
+5.  Explain the ensemble model. Advantages.
+6.  What is bias? What is variance?
+7.  Difference between normal machine learning and neural network? What a neural network is?
+8.  What is sampling in statistics?
+9.  What is proportional sampling?
+10. What is central limit theorem?
+11. P-Value.
+12. Type-I and Type-II error
+13. Difference between percentage and percentile.
+14. IQR. What is the usage of IQR?
+15. How python is different from JAVA (the guy has knowledge of Java, that's why this question.)
+    As high level. Difference of run coding in these 2 different language.
+16. Lets say in a python list there are 4-5 names like name1, name2, name3 and name3. Without using
+    any python function, how do you reverse this?
+17. Let's say a name is "aman". I want only "an". How to do this?
+18. There is a employee DataFrame (employee id, name, gender). I want to create a new column into the
+    dataset and if the gender=Male then 1 otherwise 0. How to do that.
+19. I want to give a scenario and you have to tell me how will you approach that scenario. Let's say I
+    want to train a model and model's size is 5GB. Now the server I am getting for model deployment is of
+    least capacity. How do you solve this problem?
+
+#############################################################################################
+                                               Video-6
+#############################################################################################
+
+1.  Why this called Data Science? Why not Data Mathematics?
+2.  Can you tell the complete life cycle of a data science project?
+3.  What are the properties of good model?
+4.  What is r2 score? If the r2 score of your model is 0.8. What is 0.8?
+5.  There is a group of 4 women and 5 men. I can select 3 people having atleast 1 woman. In how many
+    ways I can do that?
+6.  Conditional probability. Formula.
+7.  What is Z-Score?
+8.  How standard deviation is different from variance?
+8.  Difference between median and mean. Which is the better representation for population?
+9.  What is the Central Limit Theorem?
+10. What is ANOVA and what it does?
+11. Give me a practical example of polimorphism in python?
+12. How is a class different from structure?
+13. Difference between over-loading and over-riding?
+14. What is the usability of dictionary in python?
+15. What is the usuability of Numpy? What is the exculsive offering Numpy gives us?
+16. What makes numpy fast?
+
+#############################################################################################
+                                               Video-7
+#############################################################################################
