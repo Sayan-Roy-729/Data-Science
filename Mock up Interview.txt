@@ -211,3 +211,41 @@
 #############################################################################################
                                                Video-7
 #############################################################################################
+
+1.  Machine Learning/Data Science pipeline
+2.  Difference between supervised and unsupervised learning?
+3.  If there is no target variable, then how model will learn?
+4.  What is K-Means? Why K-Means known as K-Means, why not Z-Means, M-Means, P-Means?
+5.  How K-Means works?
+6.  What is Elbow method? What is on x-axis and what is on y-axis? And why the graph is like
+    elbow, or whynot the curve is not like sign curve or cos curve or something else?
+7.  What are the different evaluation metrices for a regression model?
+8.  If I give you the actual values and predicted values for 3 datapoints like 100, 110 and 115
+    and predicted are 98, 107 and 103. Can you compute R2 of this model? How do you compute R2?
+9.  Difference between R2 and adjusted R2? Why do you preffer adjusted r2?
+10. Is it always true if I keep adding the variable, the r2 value of the model always increasing?
+11. Lets say a spam news classification problem. Tell me how SVM classifier will work on that?
+    And how logistic regression will work?
+12. Differnce between Support Vector Machine classifier and Maximum margine. What is kernel?
+13. Do you know Generative model and Discriminative model?
+14. PCA & LDA. Which one are you more confident on?
+15. I have 200 columns in my data. I run PCA in python. How many principle component will I get?
+    How will dimension reduce?
+16. What is back propagation? Exploding Gradient Problem.
+17. Is Tf-Idf better than conv Vectorizer? Give me an real world example where Conv. Vectorizer will 
+    not do good but Tf-Idf will do?
+18. Is there any advantage of WordToVect over classical OneHotEncoding?
+19. In Gradient Descent what is the use of step size?
+20. There is an organization which want to create a new product. That organization wants to find the
+    price of that product. How will you help you as data scientist? This organization has past data 
+    for other products.
+21. What does enumerate do in python?
+22. In lambda functions, we use axis=1 or axis=0 in many times. What is the meaning of this?
+23. Difference between df1 = df and df1 = df.copy()
+24. There is a list of python where the elements are text like ["aman's credit card's cvv is 123", "aman's 
+    house number is 123"]. Suppose there are many elements and some of them ther are numbers also and in range
+    of 1 digit to 3 digits. These numbers are also in string format. Now I want a new list from this 
+    existing list where there is any 3 digit number in the element of the existing list. Can you tell me the 
+    logic?
+
+
