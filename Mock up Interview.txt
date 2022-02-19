@@ -280,4 +280,28 @@
                                                Video-9
 #############################################################################################
 
+1.  What is tf-idf and how it works?
+2.  Why do we need bias? What is the use of this in Layma's perspective?
+3.  Why do we give different weights to neurons in Layma's perspective?
+4.  What is the usuability of activation function in Layma's perspective?
+5.  What is Binary Cross Entropy?
+6.  What is the best things about the Neural Networks model and why is it so popular?
+7.  Suppose I have 1000 data points and I want to train a Random Forest model and lets say I want to create
+    10 trees. So how many records are comming out from these trees?
+8.  For a classification problem you want to train a Random Forest model and 500 decision trees are build. Now I
+    take a data for prediction, how the prediction will happen? And what happen with the Regression problem?
+9.  Do you agress that mean is not a good representation of a population? In what cases, mean is not a good
+    representation of population?
+10. How do you define the outliers? What is the purpose of finding the outliers?
+11. We can able to know that is there any outlier or not in our data. What is on x-axis and what is on
+    y-axis on Box-Plot? (BoxPlot only gives the knowledge is there any outlier in our data, doesn't tells
+    that where is that outliers)
+12. What do you mean of Hypothesis testing?
+13. Difference between probability and odds.
+14. Write a function which takes 3 numbers as input and gives the maximum number of those as output without
+    using max function.
+
+
+
+
 
