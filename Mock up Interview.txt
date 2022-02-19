@@ -189,7 +189,7 @@
                                                Video-6
 #############################################################################################
 
-1.  Why this called Data Science? Why not Data Mathematics?
+1.  Why is this called Data Science? Why not Data Mathematics?
 2.  Can you tell the complete life cycle of a data science project?
 3.  What are the properties of good model?
 4.  What is r2 score? If the r2 score of your model is 0.8. What is 0.8?
@@ -247,5 +247,37 @@
     of 1 digit to 3 digits. These numbers are also in string format. Now I want a new list from this 
     existing list where there is any 3 digit number in the element of the existing list. Can you tell me the 
     logic?
+
+
+#############################################################################################
+                                               Video-8
+#############################################################################################
+
+1.  What are the main components of Data Science?
+2.  Take any one algorithm of your choice and explain how training happens mathematically for that
+    algorithm?
+3.  What is max-pooling layer in CNN? What is the use of convolution and max-pooling?
+4.  There is a model implemented in an organization. It is multi-class image classification model. It should
+    identify my thumb print and face, and then the door should open. But what is happening now is anybody who
+    goes to the camera door is opening. So what can be the problem with the model?
+5.  Usecases of RNN and LSTM?
+6.  How linear regression works in short and brief way.
+7.  What is P value? What is the range of P-value? Is there any use of P-Value?
+8.  Degrees of Freedom.
+9.  Central Limit Theorem
+10. How do you decide outliers of the data?
+11. Is there the impact of outliers for all the algorithms?
+12. Why do we need std as there is already variance?
+13. I want to print all the number between 10 to 30 all the even numbers. How will you do this?
+14. Can you write a function which will take a file path (csv path or excel path) and you should give me the
+    number of records of that file.
+15. Create a list with your name and my name and other names as well like lst = ["Gaurav", "Aman", "Ganesh", 
+    "Vikas", "Anurag"]. I want to count the number of vowels for each elements and count should be list.
+16. How scaling is different from other python function? Like Can we use Sigmoid function as scaling the data?
+17. When we are using activation functions like ReLU, ReLU-N, Leaky-Relu, can we combine then and use it?
+
+#############################################################################################
+                                               Video-9
+#############################################################################################
 
 
