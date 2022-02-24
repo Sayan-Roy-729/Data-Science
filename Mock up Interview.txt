@@ -301,6 +301,27 @@
 14. Write a function which takes 3 numbers as input and gives the maximum number of those as output without
     using max function.
 
+#############################################################################################
+                                               Video-10
+#############################################################################################
+
+1.  What information BoxPlots gives you? Let's say there are 2 BoxPlots, one is little slim and the another
+    one is little wide. How is the underline data different?
+2.  What is Percentile?
+3.  What is mathematical intuition of Median?
+4.  What is K in KNN? How K is selected in KNN? If K is very low, then what happens and K is very high, then
+    what happens? Is it sensitive to outliers?
+5.  What is P value?
+6.  Degrees of Freedom
+7.  Curse of Dimensionality. If dimensionality is more, what is the problem?
+8.  Regularization and normalization.
+9.  How are L1 and L2 different? Why L1 makes the coefficients zero where L2 does not do that?
+10. Joined Probability.
+11. How can I create a Python dictionary with duplicate keys?
+
+#############################################################################################
+                                               Video-11
+#############################################################################################
 
 
 
