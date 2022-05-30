@@ -22,11 +22,19 @@
         2. MinMax Scaling
     2. Batch Normalization
     3. Activation Functions
+        1. Sigmoid
+        2. Hiperbolic Tangent
+        3. Relu/Leaky Relu/Renu-N
     4. Loss Functions
+        1. MSE
+        2. Binary Cross Entropy
+        3. Multiclass Cross Entropy
     5. Optimizers
         1. SGD
+        2. SGD With Momemtum
         2. Adam
         3. RMSProp
+        4. Learning Rate Decay (`torch.optim.lr_scheduler.STepLR(optimizer, step_size=batch_size * len(train_loader), gamma=.5)`)
 10. [FFN](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%207%20-%20FFN)
 11. [Data](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%208%20-%20Data)
 12. [Measure Model Performance](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%209%20-%20Measure%20Model%20Performance)
@@ -42,3 +50,30 @@
 22. [GANs](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2019%20-%20GANs)
 23. [RNN](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2020%20-%20RNN)
 24. [Python Basics]()
+
+
+
+## Metaparameters of a Neural Network:
+1. Number of layers
+2. Number of nodes in each layers
+3. Learning rate
+    1. Set Different Learning Rate
+    2. Change the learning rates wile training
+4. Data Normalization
+    1. Z-Score
+    2. MinMax Scaling
+5. Batch Normalization
+6. L1/L2 Regularization
+7. Batch/MiniBatch the Data (DataLoader)
+8. DropOut Layer
+9. Activation functions
+    1. Sigmoid
+    2. Hiperbolic Tangent
+    3. Relu/Leaky Relu/Renu-N
+10. Optimizers
+    1. SGD
+    2. SGD with momentum
+    3. Adam
+    4. RMSProp
+11. Weights
+12. Cross Validation
