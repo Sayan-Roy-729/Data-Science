@@ -40,6 +40,8 @@
 12. [Measure Model Performance](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%209%20-%20Measure%20Model%20Performance)
 13. [FFN Milestone Project](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2010%20-%20FFN%20Milestone%20Project)
 14. [Weights](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2011%20-%20Weights)
+    1. Kaiming Weight Initialization
+    2. Xavier Weight Initialization
 15. [Autoencoders](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2012%20-%20Autoencoders)
 16. [GPU](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2013%20-%20GPU)
 17. [Convolution](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2014%20-%20Convolution)
@@ -76,4 +78,6 @@
     3. Adam
     4. RMSProp
 11. Weights
+    1. Kaiming Weight Initialization
+    2. Xavier Weight Initialization
 12. Cross Validation
