@@ -81,3 +81,7 @@
     1. Kaiming Weight Initialization
     2. Xavier Weight Initialization
 12. Cross Validation
+
+
+
+**For dynamic result or progress bar, see this [notebook](https://github.com/Sayan-Roy-729/Data-Science/blob/main/Deep%20Learning/Using%20Pytorch/Part%2012%20-%20Autoencoders/Part%202%20-%20CodeChallenge%20how%20many%20units.ipynb)**
