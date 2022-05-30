@@ -17,6 +17,16 @@
     2. L1/L2 Regularization
     3. Batch training, Data augmentation 
 9. [Metaparameters (Activations, Optimizers)](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%206%20-%20Metaparameters%20(Activations%2C%20Optimizers))
+    1. Data Normalization
+        1. Z-Score
+        2. MinMax Scaling
+    2. Batch Normalization
+    3. Activation Functions
+    4. Loss Functions
+    5. Optimizers
+        1. SGD
+        2. Adam
+        3. RMSProp
 10. [FFN](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%207%20-%20FFN)
 11. [Data](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%208%20-%20Data)
 12. [Measure Model Performance](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%209%20-%20Measure%20Model%20Performance)
