@@ -45,6 +45,10 @@
 15. [Autoencoders](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2012%20-%20Autoencoders)
 16. [GPU](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2013%20-%20GPU)
 17. [Convolution](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2014%20-%20Convolution)
+    1. Convolution/Kernel/Feature Maps
+    2. Transpose convolution
+    3. Stride & Padding
+    4. Average & Max pooling
 18. [CNN](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2015%20-%20CNN)
 19. [CNN Milestone Projects](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2016%20-%20CNN%20Milestone%20Projects)
 20. [Transfer Learning](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2017%20-%20Transfer%20Learning)
