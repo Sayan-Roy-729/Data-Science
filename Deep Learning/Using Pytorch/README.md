@@ -52,6 +52,10 @@
 18. [CNN](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2015%20-%20CNN)
 19. [CNN Milestone Projects](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2016%20-%20CNN%20Milestone%20Projects)
 20. [Transfer Learning](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2017%20-%20Transfer%20Learning)
+    1. Transfer Learning from own model
+    2. ResNet-18 Model
+    3. VGG-16 Model
+    4. Pretraining with AutoEncoders
 21. [Style Transfer Learning](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2018%20-%20Style%20Transfer)
 22. [GANs](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2019%20-%20GANs)
 23. [RNN](https://github.com/Sayan-Roy-729/Data-Science/tree/main/Deep%20Learning/Using%20Pytorch/Part%2020%20-%20RNN)
