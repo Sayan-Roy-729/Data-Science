@@ -1,5 +1,6 @@
 """
 Create a PDF using fpdf. ALso add a page and add cell/text to the page.
+Also add text color.
 """
 
 from fpdf import FPDF, XPos, YPos
@@ -18,6 +19,7 @@ pdf.add_page()
 # 'B' (bold), 'U' (underline), 'I' (italics), '' (regular), combination (i.e., ('BU'))
 # font size
 pdf.set_font("helvetica", "", 16)
+pdf.set_text_color(220, 50, 50)
 
 # add text
 # w = width, if 0 then it will be entire width of the page
