@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 
 import cv2
 
-def show_img(img, figsize: tuple = (15, 15)):
+def show_img(img, figsize: tuple = (12, 10), cmap: str="gray"):
     fig = plt.figure(figsize = figsize)
     ax = fig.add_subplot(111)
-    ax.imshow(img, cmap="gray")
+    ax.imshow(img, cmap=cmap)
     plt.show()
     
 def load_img(img_path: str):
