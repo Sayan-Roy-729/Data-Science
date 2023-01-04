@@ -68,6 +68,7 @@ The above command will run the `latest postgres image`. *postgres* is the image 
 - **`-d`**: Detach mode. When you run the image, it keeps your terminal busy. You can enter or command any other command or have to keep open the termina to run the image continuously. If you pass this option, then the terminal will be detached and you can work with it.
 - **`--name some-name`**: If you dont specify this option, docker comes up a name on its own and sometimes it is confisuing. For that, you can name the container. You can't name same twice or without deleting the previous container.
 - **`-p host_port:container_port`**: Some docker image(s) you run together. But it is possible that the port is same and that can conflict to your application. For that, you can open a port (host_port) to your local machine that will communicate with the container_port. Very important option. To know which port the container is using, you can use `docker ps` command. This concept is known as *`port maping`*.
+- - **`--net network-name`**: Connect the container to a network. This can help to connect other containers with this containers easily. Otherwise different networks can't connect each other.
 
 ### [`docker stop`](https://docs.docker.com/engine/reference/commandline/stop) or [`docker container stop`](https://docs.docker.com/engine/reference/commandline/container_stop):
 
@@ -111,4 +112,23 @@ You can see the logs of the containers. It helps to get inside what is executing
 docker logs container_name
 or
 docker logs container_id
+```
+## Docker Example:
+
+### Connect docker [mongo-express](https://hub.docker.com/_/mongo-express) with [mondodb](https://hub.docker.com/_/mongo):
+[MongoDB](https://hub.docker.com/_/mongo) is the database and the [MongoDB-Express](https://hub.docker.com/_/mongo-express) is the Web-based MongoDB admin interface, written with Node.js and express. So, we will start the container first of the MongoDB and then also start the MongoDB-Express container by connecting with the MongoDB network.
+
+Create a network that both containers will connect together.
+```bash
+docker network create mongo-network
+```
+
+Start the MongoDB container:
+```bash
+docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network -d mongo
+```
+
+Now start the MongoDB-Express container:
+```bash
+docker run --network mongo-network -e ME_CONFIG_MONGODB_SERVER=mongodb -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -p 8081:8081 -d --name mongo-express mongo-express
 ```
