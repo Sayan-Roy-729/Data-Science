@@ -58,7 +58,7 @@ docker run postgres
 ```
 or
 ```bash
-docker run postgres:14
+docker run postgres:13.8
 ```
 The above command will run the `latest postgres image`. *postgres* is the image name. If you want to run a specific version of the image, you have to specify as so called *`tag`*.
 
@@ -67,3 +67,48 @@ The above command will run the `latest postgres image`. *postgres* is the image 
 - **`-e ENVIRONMENT_VAR=VALUE`**: Some images need environment variables which help to run the image properly. E.g., to run postgres properly, you have to set password by `POSTGRES_PASSWORD=mysecretpassword`.
 - **`-d`**: Detach mode. When you run the image, it keeps your terminal busy. You can enter or command any other command or have to keep open the termina to run the image continuously. If you pass this option, then the terminal will be detached and you can work with it.
 - **`--name some-name`**: If you dont specify this option, docker comes up a name on its own and sometimes it is confisuing. For that, you can name the container. You can't name same twice or without deleting the previous container.
+- **`-p host_port:container_port`**: Some docker image(s) you run together. But it is possible that the port is same and that can conflict to your application. For that, you can open a port (host_port) to your local machine that will communicate with the container_port. Very important option. To know which port the container is using, you can use `docker ps` command. This concept is known as *`port maping`*.
+
+### [`docker stop`](https://docs.docker.com/engine/reference/commandline/stop) or [`docker container stop`](https://docs.docker.com/engine/reference/commandline/container_stop):
+
+Stop one or more running containers.
+
+```bash
+docker stop container_name
+or
+docker stop container_id
+or
+docker container stop container_name
+or
+docker container stop container_id
+```
+
+### [`docker contailer ls`](https://docs.docker.com/engine/reference/commandline/container_ls):
+An alternative of the command `docker ps` to list out all the active docker containers.
+
+```bash
+docker container ls
+```
+
+If you want all the containers whatever it is running or not, command this:
+```bash
+docker container ls -a
+```
+
+### [`docker container prune`](https://docs.docker.com/engine/reference/commandline/container_prune/):
+
+Remove all the stopped containers from your local machine. This is a very **dangerous command.** You have to be very careful when you are using it. Though it does remove the stopped containes but does not remove the volumes associated with the containers.
+
+```bash
+docker container prune
+```
+
+### [`docker logs`](https://docs.docker.com/engine/reference/commandline/logs):
+
+You can see the logs of the containers. It helps to get inside what is executing in containers.
+
+```bash
+docker logs container_name
+or
+docker logs container_id
+```
