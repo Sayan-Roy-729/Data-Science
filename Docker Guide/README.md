@@ -132,3 +132,4 @@ Now start the MongoDB-Express container:
 ```bash
 docker run --network mongo-network -e ME_CONFIG_MONGODB_SERVER=mongodb -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -p 8081:8081 -d --name mongo-express mongo-express
 ```
+Now the web app of mongodb-express container is running and you can visit by using the browser. The url is http://localhost:8081. You can visit it.
