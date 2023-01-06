@@ -279,3 +279,83 @@ crosstab = DataFrame.pivot_table(index=category_col_1, columns=category_col_2, a
 crosstab
 ```
 
+# **Some more Statistical Concepts:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+## **Random Sampling** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+*Random Sampling* is the process in which each available member of the population being sampled has an equal chance of being chosen for the sample at each draw. The sample that results is called a *`simple random sample`*. Sampling can be down **`with replacement`**, in which observations are put back in the population after each draw for possible future reselection. Or it can be done **`without replacement`**, in which case observations once selected are unavailable for future draws.
+
+In **`stratified sampling`**, the population is divided up into *`strata`*, and random samples are taken from each stratum.
+
+## **Statistical Bias:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+Statistical bias refers to measurement or sampling errors that are *`systematic`* and *`produced by the measurement`* or *`sampling process`*. 
+
+Consider the physical process of a gun shooting at a target. It will not hit the absolute center of the target every time or even much at all. An unbiased process will produce error, but it is random and does not tend strongly in any direction. 
+
+Bias comes in different forms, may be `observable` or `invisible`. When a result does suggest bias, it is often an indicator that a statistical or machine learning model has been misspecified or an important variable left out.
+
+## **Selection Bias:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+Selection bias refers to the practice of selectively choosing data - consciously or unconsciously - in a way that leads to a conclusion that is misleading or ephemeral.
+
+`Data snooping` is extensive hunting through the data until something interesting emerges. There is a saying among statisticians: "If you torture the data long enough, sooner or later it will confess."
+
+If you repeatedly run different models and ask different questions with a large data set, you are bound to find something interesting. This is called `vast search effect.`
+
+## **Central Limit Theorem / Sampling Distribution:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+The statistics (e.g., mean) drawn from multiple samples will resemble the familiar bell-shaped normal curve, even if the source population is not normally distributed, provided that the sample size is large enough and the departure of the data from normality is not too great.
+
+## **Standard Error:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+The standard error is a single metric that sums up the variability in the sampling distribution for a statistics.
+
+$$Standard \ Error \ (SE) = \frac{std}{\sqrt{sample \ size}} = \frac{s}{\sqrt{n}}$$
+
+Consider the following approach to measuring standard error:
+1. Collect a number of brand-new samples from the population.
+2. For each new sample, calculate the statistics (e.g., mean)
+3. Calculate the standard deviation of the statistics computed in step 2; use this as your estimate of standard error.
+
+## **Bootstrapping:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+One easy and effective way to estimate the sampling distribution of a statistics, or of model parameters is to draw additional `samples, with replacement` from the sample itself and recalculate the statistics or model for each resample. This procedure is called **`bootstrap`**. It does not necessarily involve any assumptions about the data or the sample statistics being normally distributed. 
+
+The algorithm for a bootstrap resampling of the mean, for a sample of size $n$, is as follows:
+1. Draw a sample value, record it and then replace it.
+2. Repeat $n$ times.
+3. Record the mean of the $n$ resampled values.
+4. Repeat steps 1-3 $R$ times.
+5. Use the $R$ results to:
+    1. Calculate their standard deviation (this estimates sample mean standard error).
+    2. Procedure a histogram or boxplot.
+    3. Find a confidence interval.
+
+```python
+from sklearn.utils import resample
+
+results = []
+for nrepeat in range(1000):
+    sample = resample(DataFrame[column_name])
+    results.append(sample.mean())
+
+results = pd.Series(results)
+print('Bootstrap Statistics:')
+print(f'original: {DataFrame[column_name].median()}')
+print(f"bias: {results.median() - DataFrame[column_name].median()}")
+print(f"std. error: {results.std()}")
+```
+
+## **Confidence Interval (CI):** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+Confidence intervals always come with a coverage level, expressed as a (high) percentage, say 90% or 95%. One way to think of a 90% confidence interval is as follows: it is the interval that encloses the central 90% of the bootstrap sampling distribution of a sample statistic. More generally, an $x\%$ confidence interval around a sample estimate should, on average, contain similar sample estimates $x\%$ of the time.
+
+Given a sample of size $n$, and a sample statistic of interest, the algorithm for a bootstrap confidence interval is as follows:
+1. Draw a random sample of size $n$ with replacement from the data (a resample).
+2. Record the statistics of interest for the resample.
+3. Repeat steps 1-2 many ($R$) times.
+4. For an $x\%$ confidence interval, trim $[(100-x)/2]\%$ of the $R$ resample results from either end of the distribution.
+5. The trim points are the endpoints of an $x\%$ bootstrap confidence interval.
+
+The higher the level of confidence, the wider the interval. Also, the smaller the sample, the wider the interval (i.e., the greater the uncertainty).
