@@ -1,5 +1,10 @@
 # EDA Approach:
 
+## <span id="index">**Index:**</span>
+1. [Data Types in Statistics]()
+2. [Measures of Central Tendency](https://github.com/Sayan-Roy-729/Data-Science#measures-of-central-tendencyestimates-of-location)
+
+## Data Types in Statistics
 Generally 2 types of data types we can see in Data-Science.
 - **`Numeric`**: Data that are expressed on a numeric scale.
     - **Continuous**: Data that can take on any value in an interval.
