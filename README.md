@@ -10,7 +10,7 @@
     5. [Mode](https://github.com/Sayan-Roy-729/Data-Science#mode-go-to-top)
     6. [Expected Value](https://github.com/Sayan-Roy-729/Data-Science#expected-value-go-to-top)
 3. [Measures of Dispersion](https://github.com/Sayan-Roy-729/Data-Science#measures-of-dispersionvariability-go-to-top)
-    1. [Mean Absolute Deviation (MAD)]https://github.com/Sayan-Roy-729/Data-Science#mean-absolute-deviation-mad-go-to-top)
+    1. [Mean Absolute Deviation (MAD)](https://github.com/Sayan-Roy-729/Data-Science#mean-absolute-deviation-mad-go-to-top)
     2. [Variance & Standard Deviation](https://github.com/Sayan-Roy-729/Data-Science#variance--standard-deviation-go-to-top)
     3. [Mean Absolute Variance](https://github.com/Sayan-Roy-729/Data-Science#median-absolute-variance-go-to-top)
     4. [Range](https://github.com/Sayan-Roy-729/Data-Science#range-go-to-top)
