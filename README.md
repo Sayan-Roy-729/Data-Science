@@ -7,7 +7,26 @@
     2. [Trimmed Mean](https://github.com/Sayan-Roy-729/Data-Science#trimmed-mean)
     3. [Weighted Mean](https://github.com/Sayan-Roy-729/Data-Science#weighted-mean)
     4. [Median](https://github.com/Sayan-Roy-729/Data-Science#median)
+    5. [Mode](https://github.com/Sayan-Roy-729/Data-Science#mode)
+    6. [Expected Value](https://github.com/Sayan-Roy-729/Data-Science#expected-value)
 3. [Measures of Dispersion](https://github.com/Sayan-Roy-729/Data-Science#measures-of-dispersionvariability)
+    1. [Mean Absolute Deviation (MAD)](https://github.com/Sayan-Roy-729/Data-Science#mean-absolute-deviation-mad)
+    2. [Variance & Standard Deviation](https://github.com/Sayan-Roy-729/Data-Science#variance--standard-deviation)
+    3. [Mean Absolute Variance](https://github.com/Sayan-Roy-729/Data-Science#median-absolute-variance)
+    4. [Range](https://github.com/Sayan-Roy-729/Data-Science#range)
+    5. [Percentile | IQR](https://github.com/Sayan-Roy-729/Data-Science#percentile--iqr
+4. [Visualization](https://github.com/Sayan-Roy-729/Data-Science#visualization)
+    1. [Boxplot](https://github.com/Sayan-Roy-729/Data-Science#boxplot)
+    2. [Histogram](https://github.com/Sayan-Roy-729/Data-Science#histogram)
+    3. [Density/KDE Plot](https://github.com/Sayan-Roy-729/Data-Science#densitykde-plot)
+    4. [Bar chart](https://github.com/Sayan-Roy-729/Data-Science#bar-chart)
+    5. [Scatter plot](https://github.com/Sayan-Roy-729/Data-Science#scatter-plots)
+    6. [Hexagonal Binning Plot](https://github.com/Sayan-Roy-729/Data-Science#hexagonal-binning-plot)
+    7. [Contour Plot](https://github.com/Sayan-Roy-729/Data-Science#contour-plot)
+    8. [Heat Maps](https://github.com/Sayan-Roy-729/Data-Science#heat-maps)
+    9. [Violin Plot](https://github.com/Sayan-Roy-729/Data-Science#violin-plot)
+5. [Correlation](https://github.com/Sayan-Roy-729/Data-Science#correlation)
+6. [Pivot Table](https://github.com/Sayan-Roy-729/Data-Science#pivot-table)
 
 ## **Data Types in Statistics:**
 Generally 2 types of data types we can see in Data-Science.
