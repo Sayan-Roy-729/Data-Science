@@ -359,3 +359,33 @@ Given a sample of size $n$, and a sample statistic of interest, the algorithm fo
 5. The trim points are the endpoints of an $x\%$ bootstrap confidence interval.
 
 The higher the level of confidence, the wider the interval. Also, the smaller the sample, the wider the interval (i.e., the greater the uncertainty).
+
+
+
+``` mermaid
+flowchart LR
+    %% Colors %%
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff
+    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff
+    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff
+    classDef magenta fill:magenta,stroke:#000,stroke-width:2px,color:#fff
+
+    %% Goals Database %%
+    G[(Goals)]:::blue <===> |Connects To| P[(Projects)]:::blue
+
+    %% Projects Database %%
+    %% Deadline %%
+    P ---o |Has| PD(Deadline):::orange
+    PD ---x |Is| MT([Met]):::green
+    PD ---x |Is| OV([Overdue]):::red ---> |Push| FOV{4 Days}:::magenta
+
+    %% Tasks %%
+    P ---o |Has| PT(Tasks):::orange
+    PT ---x |Is| IC([Incomplete]):::red
+    PT --- C([Complete]):::green
+    C ---> |Needs| R[[Review]]
+
+    %% Review %%
+    R -..-> |Creates New| G
+```
