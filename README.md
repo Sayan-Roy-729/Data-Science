@@ -27,6 +27,17 @@
     9. [Violin Plot](https://github.com/Sayan-Roy-729/Data-Science#violin-plot-go-to-top)
 5. [Correlation](https://github.com/Sayan-Roy-729/Data-Science#correlation-go-to-top)
 6. [Pivot Table](https://github.com/Sayan-Roy-729/Data-Science#pivot-table-go-to-top)
+7. [Some more Statistical Concepts](https://github.com/Sayan-Roy-729/Data-Science#some-more-statistical-concepts-go-to-top)
+
+    1. [Random Sampling](https://github.com/Sayan-Roy-729/Data-Science#random-sampling-go-to-top)
+    2. [Statistical Bias](https://github.com/Sayan-Roy-729/Data-Science#statistical-bias-go-to-top)
+    3. [Selection Bias](https://github.com/Sayan-Roy-729/Data-Science#selection-bias-go-to-top)
+    4. [Central Limit Theorem / Sampling Distribution](https://github.com/Sayan-Roy-729/Data-Science#central-limit-theorem--sampling-distribution-go-to-top)
+    5. [Standard Error](https://github.com/Sayan-Roy-729/Data-Science#standard-error-go-to-top)
+    6. [Bootstrapping](https://github.com/Sayan-Roy-729/Data-Science#bootstrapping-go-to-top)
+    7. [Confidence Interval (CI)](https://github.com/Sayan-Roy-729/Data-Science#confidence-interval-ci-go-to-top)
+
+---
 
 ## **Data Types in Statistics:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
 
@@ -359,3 +370,39 @@ Given a sample of size $n$, and a sample statistic of interest, the algorithm fo
 5. The trim points are the endpoints of an $x\%$ bootstrap confidence interval.
 
 The higher the level of confidence, the wider the interval. Also, the smaller the sample, the wider the interval (i.e., the greater the uncertainty).
+
+## **Normal Distribution:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+$$\large f(x) = \frac{1}{\sigma\sqrt{2\pi}}{e^{-\frac{1}{2}(\frac{x - \mu}{\sigma})^2}}$$
+
+$f(x) = probability density function$
+
+$\sigma = standard deviation$
+
+$\mu = mean$
+
+<img src="https://i.stack.imgur.com/jkMDV.png" width=500 alt="Normal Distribution"/>
+
+### **Standardization / Z-Score** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+To compare the data to a standard normal distribution, you subtract the mean and then divided by the standard deviation. This is called *standardization* or *z-score*.
+
+$$\large Z \ - Score = \frac{x_i - \bar{x}}{\sigma_x}$$
+
+### **QQ-Plot:** <sup><sub>[**Go to top**](https://github.com/Sayan-Roy-729/Data-Science#index)</sub></sup>
+
+A QQ - Plot is used to visually determine how close a sample specified distribution - in this case, the normal distribution.
+
+```python
+import scipy.stats as stats
+
+fig, ax = plt.subplots(figsize=(4, 4))
+norm_sample = stats.norm.rvs(size=100)
+stats.probplot(norm_sample, plot=ax)
+```
+
+## **Long-Tailed Distribution:**
+
+Sometimes, the distribution is highly skewed, such as with income data or the distribution can be discrete, as with binominal data. The long narrow portion of a frequency distribution, where relatively extreme values occur at low frequency.
+
+<img src="https://i.stack.imgur.com/QCGKr.png" alt="Long-Tailed distribution" width=500/>
