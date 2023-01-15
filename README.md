@@ -406,3 +406,61 @@ stats.probplot(norm_sample, plot=ax)
 Sometimes, the distribution is highly skewed, such as with income data or the distribution can be discrete, as with binominal data. The long narrow portion of a frequency distribution, where relatively extreme values occur at low frequency.
 
 <img src="https://i.stack.imgur.com/QCGKr.png" alt="Long-Tailed distribution" width=500/>
+
+# **How to add diagram:**
+
+```bash
+flowchart LR
+    %% Colors %%
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff
+    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff
+    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff
+    classDef magenta fill:magenta,stroke:#000,stroke-width:2px,color:#fff
+
+    %% Goals Database %%
+    G[(Goals)]:::blue <===> |Connects To| P[(Projects)]:::blue
+
+    %% Projects Database %%
+    %% Deadline %%
+    P ---o |Has| PD(Deadline):::orange
+    PD ---x |Is| MT([Met]):::green
+    PD ---x |Is| OV([Overdue]):::red ---> |Push| FOV{4 Days}:::magenta
+
+    %% Tasks %%
+    P ---o |Has| PT(Tasks):::orange
+    PT ---x |Is| IC([Incomplete]):::red
+    PT --- C([Complete]):::green
+    C ---> |Needs| R[[Review]]
+
+    %% Review %%
+    R -..-> |Creates New| G
+```
+
+``` mermaid
+flowchart LR
+    %% Colors %%
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff
+    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff
+    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff
+    classDef magenta fill:magenta,stroke:#000,stroke-width:2px,color:#fff
+
+    %% Goals Database %%
+    G[(Goals)]:::blue <===> |Connects To| P[(Projects)]:::blue
+
+    %% Projects Database %%
+    %% Deadline %%
+    P ---o |Has| PD(Deadline):::orange
+    PD ---x |Is| MT([Met]):::green
+    PD ---x |Is| OV([Overdue]):::red ---> |Push| FOV{4 Days}:::magenta
+
+    %% Tasks %%
+    P ---o |Has| PT(Tasks):::orange
+    PT ---x |Is| IC([Incomplete]):::red
+    PT --- C([Complete]):::green
+    C ---> |Needs| R[[Review]]
+
+    %% Review %%
+    R -..-> |Creates New| G
+```
