@@ -103,6 +103,11 @@ $$1 + R_t = \frac{P_t + D_t}{P_{t_1}}$$
 
 > # **Random Walks & Random Walks Hypothesis** 
 
+- Brief summary: a more theoretical view on the "price simulation" practical.
+- Random walk is a special case of ARIMA.
+- Random walk hypothesis: stock prices follow a random walk.
+- Consequence: stock price are unpredictable
+
 ## What is a random walk?
 
 $$\large p_0 = some \ initial \ value$$
@@ -112,4 +117,40 @@ $$\large p_1 = p_0 + e_1, \ where \ e_1 \in \{-1, +1\}$$
 $$\large p_2 = p_1 + e_2$$
 
 - Imagine yourself walking - you take one step **left** or **right** based on a coin flip - that's this random walk!
-- 
+- Can't predict the future (50% chance of being correct).
+
+## Gaussian Random Walk
+
+$$\large p_0 = some \ initial \ value$$
+
+$$\large p_1 = p_0 + e_1, \ where \ e_i \sim \mathcal{N}(0, \sigma^2) $$
+
+$$\large p_2 = p_1 + e_2$$
+
+$$p_1 - p_0 = e_1 \sim \mathcal{N}(0, \sigma^2) \approx Gaussian \ Noise$$
+
+## Log Prices
+
+- Consider a random walk with drift
+
+$$\large p_t = p_{t-1} + \mu + e_t, \ e_t \sim \mathcal{N}(0, \sigma^2) $$
+
+- Take p(t-1) to the LHS - this is now the log return
+
+$$\large r_t = p_t - p_{t-1} = \mu + e_t $$
+
+- The log return is therefore distributed as follows
+
+$$\large r_t \sim \mathcal{N}(\mu, \sigma^2)$$
+
+- This model is the basis for the `Black-Scholes formula`, which earned the Nobel Prize in Economics.
+
+## Is the Random Walk Hypothesis correct?
+- **Assumption:** the log returns are iid (independent and identically distributed)
+- But we have observed **volatility clustering**.
+- Automatically means that the log returns are not identically distributed.
+- If volatility at one moment is related to nearby volatilities, then it's also not independent.
+- It is a convenient model.
+    - Used to derive Black-Scholes
+    - When fitting ARIMA, sometimes the best model is a random walk.
+    - It's possible to use statistical tests to determine whether or not a time series is a random walk.
