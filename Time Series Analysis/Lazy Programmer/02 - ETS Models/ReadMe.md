@@ -247,16 +247,32 @@ result.forecast(n)
 ```
 
 
+## [**Walk-Forward Validation:**](https://sarit-maitra.medium.com/take-time-series-a-level-up-with-walk-forward-validation-217c33114f68)
 
+- In general machine learning architecture, you use K-Fold Cross Validation to evaluate your model. But in time-series, you can't use because in the time-series data, there are time dependent factors among the data points.
+- Since the data is split randomly, you'll mix past and future data.
+- In the real-world, your model cannot be trained on future data!
+- We can only use past data to predict future data.
+- For this, Walk Forward Validation can be a key-point for the time-series data.
+- Start with some minimum data to train on.
+- ... and validation forecast horizon $h \geq 1$
+- Walk forward one step (train set becomes +1 bigger).
+- Validate on the next $h$ data points, etc etc. until you reach the end.
 
+![Walk Forward Validation](https://alphascientist.com/images/walkforward.png)
 
+- You can also set the training set constant size.
+- When you add more training data to the end, you delete the same amount from the beginning.
 
+![With constant training set](https://www.researchgate.net/publication/348249035/figure/fig4/AS:983761357393920@1611558393131/Walk-forward-validation-with-five-folds.jpg)
 
-## Different ways to combine
+- You can also walk forward by $h$ steps instead of just 1 step.
+- Or any other step size you like.
 
-- $Output = Level + Trend + Seasonality$
-- $Output = Level * Trend * Seasonality$
-- $Output = (Level + Trend) * Seasonality$
-- And more...
+### TimeSeriesSplit (Scikit-Learn)
 
-## 
+- Might save you from a bit of work, under the right circumstances.
+- To use with cross validation functions, your model must conform to scikit-learn interface (e.e. not statsmodels)
+- Another limitation: not flexible - must use non-overlapping blocks
+- All blocks are equal size - first train set is teeny tiny
+- Do these reflect real-world operation?
