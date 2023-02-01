@@ -342,3 +342,135 @@ The vertical axis is the value of the function and the horizontal axis still rep
 ![How to calculate PACF Part-2](../00%20-%20Images/image-7.png)
 
 ![How to calculate PACF Part-3](../00%20-%20Images/image-8.png)
+
+
+## Auto ARIMA
+
+- Auto ARIMA helps to find the best values of p, d and q to get the best model by using the computation power.
+- In R's forecast package, it's just *auto.arima(series)*
+- No such function in *statsmodels*.
+- Luckily, **pmdarima** fills the gap. Under the hood, it uses the statsmodels library and helps us to do so.
+
+```bash
+pip install pmdarima
+```
+
+**How to use pmdarima?**
+
+```python
+# assuming the data as a Series.
+model = pm.auto_arima(data, ..., seasonal=True, m=12)
+
+# return predictions and confidence intervals
+test_pred, conf_int = model.predict(n_periods=Ntest, return_conf_int=True)
+
+# in-sample (train) predictions
+train_pred = model.predict_in_sample(start=0, end=-1)
+```
+
+## Seasonal ARIMA (SARIMA)
+- Recall: stock prices don't typically have seasonality, but stock prices don't comprise all financial data
+- E.g. weather (seasons) affect real estate purchases
+- Notation: {$SARIMA(p, d, q)$ x $(P, D, Q)_m$} where m is the seasonal period.
+- If you write down the SARIMA model in "operator"-form, it is the multiplication of the non-seasonal and seasonal parts.
+
+**Seasonal Differencing**
+
+- If D = 1 (that's mean the difference of t once):
+
+$$\large \Delta_mY_t = Y_t - Y_{t-m}$$
+
+- E.g. if t = March, subtract the previous March
+- Add-on to our understanding of stationarity: it should not exhibit trend, change in variance or seasonality. Seasonality is the other key component of this.
+- Stationarity time-series should also not exhibit seasonality. So, a time series does exhibit seasonality, then you would say it's not stationarity.
+
+**ARIMA without Seasonality**
+- It is possible that for non-seasonal ARIMA to model the airlines passengers dataset quite well. Even though it has no seasonal component.
+- It can still model seasonal time series, just not as nicely.
+- Fact: AR(2) can perfectly model a sine wave.
+- So, ARIMA can do a good job but SARIMA can give the best model for seasonal data.
+
+**Seasonal AR and MA**
+- Let's suppose Y(t) now represents the time series after seasonal differencing.
+- $AR \ part$
+
+$$\large Y_t = b + \varepsilon_t + \phi_1Y_{t-m} + \phi_2Y_{t-2m} + ... + \phi_PY_{t-Pm}$$
+
+- $MA \ part$
+
+$$\large Y_t = c + \varepsilon_t + \theta_1\varepsilon_{t-m} + \theta_2\varepsilon_{t-2m} + ... + \theta_Q\varepsilon_{t-Qm}$$
+
+- SARIMA is the seasonal AR component multiplied by the non-seasonal AR component, added to the seasonal MA component multiplied by the non-seasonal MA component.
+
+## SARIMAX
+
+- "X" refers to the exogenous variables.
+- Suppose you have a time series of length T. At each point the time series you have some feature vector of exogenous data. E.g. sentiment of Elon Musk's tweets.
+- You collect external data, e.g. sentiment of Elon Musk's tweets / financial news sites.
+- You'll have an array of feature vectors (T x D)
+- This can be passed into Auto ARIMA.
+- Note: in order to make predictions, you'll need feature vectors for that time period.
+
+## How do we define the best model?
+
+- Auto ARIMA finds the best model, but what is "best"?
+- Because the model comes from the statistics literature, it is grounded in Statistics rather than machine learning.
+- Earlier, we looked at ACF and PACF
+    - Trial and error seems naive in comparison
+- Auto ARIMA brings us back to trial and error!
+- You may have considered **grid search**.
+- Auto ARIMA can do grid search, but default is **stepwise** search - *Hyndman and Khandakar (2008)*.
+- Exhaustive grid search is still slow.
+
+## Model Evaluation
+
+- When we do Auto ARIMA, it uses some criteria to evaluate the model. The best value given by a model, will be chosen.
+- There are 2 criteria to evaluate
+    - AIC (Akaike Information Criterion)
+    - BIC (Bayesian Information Criterion)
+- When we are building a machine learning model, we often have to make a *trade off* between model *complexity* and model *accuracy*.
+- For ARIMA, more complexity means increasing the values of $p$ and $q$. More complex == larger p + q. $p$ is the no. of past data points to include in the model and $q$ is the no. of past errors to include a model.
+- If you've studied Linear Regression, then you know even adding *completely random noise* improves accuracy!
+- That is not good at all. What is the "sweet spot" for model complexity?
+
+**Penalizing the Log-Likelihood (A Statistics Way)**
+
+- The loss function for ARIMA is the negative log-likelihood.
+- (For the most part) minimizing the log-likelihood is the same as minimizing the squared error.
+- If we look only the log-likelihood, we might end up overfitting. So, we choose a $Penalty$ term to the negative log-likelihood.
+- For AIC and BIC, this $penalty$ term is computed differently. 
+- We choose the model that yields the *minimum* evaluation metric.
+- Auto ARIMA uses AIC by default (but usually both give same answer)
+
+$AIC = 2(\#params) - 2\log(L)$
+
+$BIC = (\#params)\log(T) - 2\log(L)$
+
+Where,
+
+L = likelihood
+
+T = length of time series (number of data points)
+
+**The Machine Learning Way** 
+- In ML, we don't care that much about number of parameters.
+- Can we fairly compare different kinds of models? (random forest, neural network) - maybe...
+- Does it really matter in modern deep learning?
+- It used to! Check out neural network papers (before the phrase "deep learning" existed) - many reference parameter count vs. sample count
+- Makes sense for Linear Regression
+    - Data matrix is of size $N \times D$ (D is also number of params)
+    - Linear algebra
+- Modern neural networks don't behave that badly with high parameter count - some have billions of params, cost \$millions\$ to train.
+- In ML, we care more about the ability to generalize to unseen data
+    - The "test set"
+    - E.g. Recommender systems (movies / products people haven't seen)
+    - E.g. Fraud detection (new customers / applications)
+    - E.g. Forecasting
+
+![How to choose the best model?](https://www.pngitem.com/pimgs/m/223-2232509_keep-it-simple-stupid-kiss-principle-hd-png.png)
+
+- If we care about out-of-sample accuracy, why not check it directly?
+- If we're using out-of-sample data to choose hyperparameters, we technically call it a "validation set" (e.g. cross-validation)
+- AIC / BIC encourages us to choose the simples model possible.
+- Our motivation is *modeling* and *explaining* how the data arose rather than making predictions.
+- Simple is better (parsimonious model).
