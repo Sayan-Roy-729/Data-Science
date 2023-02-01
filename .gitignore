@@ -17,3 +17,6 @@
 
 # virtual environment
 */datascience_venv
+
+# all .exe files (there are some .exe files for browser drivers for Selenium)
+**/*.exe
