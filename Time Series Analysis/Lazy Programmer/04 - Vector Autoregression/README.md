@@ -24,32 +24,7 @@ $$\large \vec{y_t} = \vec{b} + \Phi_1\vec{y}_{t-1} + ... + \Phi_p\vec{y}_{t-p} +
 
 - Consider $VAR(p)$ in 2 dimensions (let p = 1 for simplicity)
 
-$$\large
-\begin{vmatrix}
-y_t^{(1)}\\
-y_t^{(2)}
-\end{vmatrix} 
-
-= \begin{vmatrix}
-b^{(1)}\\
-b^{(2)}
-\end{vmatrix} +
-
-\begin{vmatrix}
-\phi_{11} & \phi_{12}\\
-\phi_{21} & \phi_{22}
-\end{vmatrix}
-
-\begin{vmatrix}
-y_{t-1}^{(1)}\\
-y_{t-2}^{(2)}
-\end{vmatrix} +
-
-\begin{vmatrix}
-\varepsilon_t^{(1)}\\
-\varepsilon_t^{(2)}
-\end{vmatrix}
-$$
+$$\large \begin{vmatrix}y_t^{(1)} \\\ y_t^{(2)}\end{vmatrix} = \begin{vmatrix}b^{(1)}\\\b^{(2)}\end{vmatrix} + \begin{vmatrix}\phi_{11} & \phi_{12}\\\phi_{21} & \phi_{22}\end{vmatrix}\begin{vmatrix}y_{t-1}^{(1)}\\\y_{t-2}^{(2)}\end{vmatrix} + \begin{vmatrix}\varepsilon_t^{(1)}\\\ \varepsilon_t^{(2)}\end{vmatrix}$$
 
 - Multiply it out and express both components in scalar form
 
